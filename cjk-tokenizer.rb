@@ -7,6 +7,10 @@ class CjkTokenizer < Formula
 
   depends_on 'xapian'
 
+  head do
+    url 'https://github.com/rboulton/cjk-tokenizer.git'
+  end
+
   def install
     inreplace 'cjk-tokenizer/Makefile' do |s|
       s.change_make_var! 'CPP', ENV.cxx
