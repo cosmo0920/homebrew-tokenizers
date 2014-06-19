@@ -3,7 +3,7 @@ require "formula"
 class CjkTokenizer < Formula
   homepage "https://github.com/rboulton/cjk-tokenizer"
   url "https://github.com/rboulton/cjk-tokenizer/archive/eb7ec18aabcbc9368542f64dab0ed8f424d52290.zip"
-  sha256 "2df1f1e635705f8dcb468c4c4f3e60f1be6b4464afda3688b1a587f781fcea0ed"
+  sha256 "df1f1e635705f8dcb468c4c4f3e60f1be6b4464afda3688b1a587f781fcea0ed"
 
   depends_on "xapian"
 
