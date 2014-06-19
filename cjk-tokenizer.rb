@@ -20,7 +20,7 @@ class CjkTokenizer < Formula
     end
     system "cd cjk-tokenizer && make"
     lib.install "cjk-tokenizer/libcjk-tokenizer.a"
-    include.install "cjk-tokenizer/cjk-hanconvert.h"
-    include.install "cjk-tokenizer/cjk-tokenizer.h"
+    (include/"cjk-tokenizer").install "cjk-tokenizer/cjk-hanconvert.h"
+    (include/"cjk-tokenizer").install "cjk-tokenizer/cjk-tokenizer.h"
   end
 end

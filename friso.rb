@@ -19,7 +19,7 @@ class Friso < Formula
     system "cd src && make share && make friso"
 
     # install header && library && binary
-    include.install "src/friso.h"
+    (include/"friso").install "src/friso.h"
     lib.install "src/libfriso.dylib"
     bin.install "src/friso"
   end
