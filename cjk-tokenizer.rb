@@ -15,7 +15,7 @@ class CjkTokenizer < Formula
       s.gsub! '/usr/local', prefix
     end
     system 'cd cjk-tokenizer && make'
-    lib.install 'jk-tokenizer/libcjk-tokenizer.a'
+    lib.install 'cjk-tokenizer/libcjk-tokenizer.a'
     include.install 'cjk-tokenizer/cjk-hanconvert.h'
     include.install 'cjk-tokenizer/cjk-tokenizer.h'
   end
