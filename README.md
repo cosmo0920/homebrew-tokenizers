@@ -16,3 +16,5 @@ This tokenizer library is modified to use Xapian's internal unicode routines.
 ## friso
 
 * [Friso](https://code.google.com/p/friso/)
+
+friso中文分词器
