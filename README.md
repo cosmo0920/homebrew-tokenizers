@@ -1,5 +1,7 @@
-Juman Formula
+Tokenizer Formulae
 ===
+
+## Juman
 
 juman Formula for Homebrew.
 
