@@ -5,6 +5,10 @@ class Friso < Formula
   url "https://friso.googlecode.com/files/friso-1.6.0-src-lib-dict.zip"
   sha256 "8d97859fb3cb1711193a3076b3a471f55a297a5cda59ba14a19b43e4a647ce91"
 
+  head do
+    url "http://git.oschina.net/lionsoul/friso.git"
+  end
+
   def install
     # Hardcorded install path
     build_dir = Dir.pwd
