@@ -27,6 +27,6 @@ class Friso < Formula
     (include/"friso").install "src/friso_API.h"
     lib.install "src/libfriso.dylib"
     bin.install "src/friso"
-    (etc/"friso").install_symlink "friso.ini"
+    (etc/"friso").install "friso.ini"
   end
 end
