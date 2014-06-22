@@ -20,6 +20,9 @@ class Friso < Formula
       s.change_make_var! "LIB_FILE", "libfriso.dylib"
       s.gsub! "-L.", "-L #{build_dir}/src"
     end
+    inreplace "friso.ini" do |s|
+      s.gsub! "/c/products/friso/dict/UTF-8/", "/usr/local/share/friso/dict/UTF-8/"
+    end
     system "cd src && make share && make friso"
 
     # install header && library && binary
@@ -28,5 +31,6 @@ class Friso < Formula
     lib.install "src/libfriso.dylib"
     bin.install "src/friso"
     (etc/"friso").install "friso.ini"
+    (share/"friso").install "dict"
   end
 end
