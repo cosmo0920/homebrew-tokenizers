@@ -16,6 +16,7 @@ class Swath < Formula
       --prefix=#{prefix}
     ]
 
+    system './autogen.sh' if build.head?
     system './configure', *args
     system 'make install'
   end
