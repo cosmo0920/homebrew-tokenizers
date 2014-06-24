@@ -18,3 +18,9 @@ This tokenizer library is modified to use Xapian's internal unicode routines.
 * [Friso](https://code.google.com/p/friso/)
 
 friso中文分词器
+
+## SWATH
+
+* [SWATH](http://linux.thai.net/projects/swath)
+
+Smart Word Analysis for THai.
