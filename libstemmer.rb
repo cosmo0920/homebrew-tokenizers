@@ -9,13 +9,13 @@ class Libstemmer < Formula
     # Hardcorded include path :<
     build_dir = Dir.pwd
     inreplace "Makefile" do |s|
-      s.gsub! "-Iinclude", "-I #{build_dir}/include"
+      s.gsub! "-Iinclude", "-I #{build_dir}/include -Wall -fPIC"
     end
     source_args = %Q(-O2 -Wall -fPIC)
     shared_args = %Q(-fPIC -shared)
 
     system "make"
-    system "#{ENV.cc} #{source_args} #{build_dir}/libstemmer.o #{shared_args} -o #{build_dir}/libstemmer.dylib"
+    system "#{ENV.cc} #{source_args} -force_load #{build_dir}/libstemmer.o #{shared_args} -o #{build_dir}/libstemmer.dylib"
     system "mv #{build_dir}/libstemmer.o #{build_dir}/libstemmer.a"
     include.install "include"
     bin.install "stemwords"
