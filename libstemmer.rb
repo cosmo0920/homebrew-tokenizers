@@ -15,8 +15,11 @@ class Libstemmer < Formula
 
     system "make"
     system "#{ENV.cc} #{shard_args} #{build_dir}/libstemmer.o -o #{build_dir}/libstemmer.dylib"
+    system "ar rv #{build_dir}/libstemmer.a #{build_dir}/libstemmer.o"
+    system "ranlib #{build_dir}/libstemmer.a"
     include.install "include"
     bin.install "stemwords"
     lib.install "libstemmer.dylib"
+    lib.install "libstemmer.a"
   end
 end
