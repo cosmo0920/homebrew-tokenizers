@@ -24,3 +24,9 @@ friso中文分词器
 * [SWATH](http://linux.thai.net/projects/swath)
 
 Smart Word Analysis for THai.
+
+## Libstemmer
+
+* [libstemmer_c](http://snowball.tartarus.org/index.php)
+
+Stemming algorithms for vaious europian languages.
