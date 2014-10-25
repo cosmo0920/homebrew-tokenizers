@@ -11,12 +11,12 @@ class Libstemmer < Formula
     inreplace "Makefile" do |s|
       s.gsub! "-Iinclude", "-I #{build_dir}/include"
     end
-    shard_args = %Q(-O2 -Wall -fPIC -shared)
+    source_args = %Q(-O2 -Wall -fPIC)
+    shared_args = %Q(-fPIC -shared)
 
     system "make"
-    system "#{ENV.cc} #{shard_args} #{build_dir}/libstemmer.o -o #{build_dir}/libstemmer.dylib"
-    system "ar rv #{build_dir}/libstemmer.a #{build_dir}/libstemmer.o"
-    system "ranlib #{build_dir}/libstemmer.a"
+    system "#{ENV.cc} #{source_args} #{build_dir}/libstemmer.o #{shared_args} -o #{build_dir}/libstemmer.dylib"
+    system "mv #{build_dir}/libstemmer.o #{build_dir}/libstemmer.a"
     include.install "include"
     bin.install "stemwords"
     lib.install "libstemmer.dylib"
