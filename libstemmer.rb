@@ -18,7 +18,7 @@ class Libstemmer < Formula
     system "make"
     system "#{ENV.cc} #{source_args} -force_load #{build_dir}/libstemmer.o #{shared_args} -o #{build_dir}/libstemmer.dylib"
     system "mv #{build_dir}/libstemmer.o #{build_dir}/libstemmer.a"
-    include.install "include"
+    include.install "include/libstemmer.h"
     bin.install "stemwords"
     lib.install "libstemmer.dylib"
     lib.install "libstemmer.a"
