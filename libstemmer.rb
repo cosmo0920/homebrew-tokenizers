@@ -4,7 +4,7 @@ class Libstemmer < Formula
   homepage "http://snowball.tartarus.org"
   url "http://snowball.tartarus.org/dist/libstemmer_c.tgz"
   sha1 "9b0f120a68a3c688b2f5a8d0f681620465c29d38"
-  version "0+svn546"
+  version "0.1.0"
 
   def install
     # Hardcorded include path :<
