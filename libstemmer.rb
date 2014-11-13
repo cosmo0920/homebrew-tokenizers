@@ -3,7 +3,7 @@ require "formula"
 class Libstemmer < Formula
   homepage "http://snowball.tartarus.org"
   url "http://snowball.tartarus.org/dist/libstemmer_c.tgz"
-  sha1 "9b0f120a68a3c688b2f5a8d0f681620465c29d38"
+  sha1 "1ac6bb16e829e9f3a58f62c27047c26784975aa1"
   version "0.1.0"
 
   def install
