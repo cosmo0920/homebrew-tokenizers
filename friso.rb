@@ -1,5 +1,3 @@
-require "formula"
-
 class Friso < Formula
   homepage "https://code.google.com/p/friso/"
   url "http://downloads.sourceforge.net/project/friso/friso-1.6.1-src-dict.zip"

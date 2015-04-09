@@ -1,5 +1,3 @@
-require 'formula'
-
 class Datrie < Formula
   homepage 'http://linux.thai.net/projects/datrie'
   url 'ftp://linux.thai.net/pub/ThaiLinux/software/libthai/libdatrie-0.2.4.tar.gz'

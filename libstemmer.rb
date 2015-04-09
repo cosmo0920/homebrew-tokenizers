@@ -1,5 +1,3 @@
-require "formula"
-
 class Libstemmer < Formula
   homepage "http://snowball.tartarus.org"
   url "http://snowball.tartarus.org/dist/libstemmer_c.tgz"

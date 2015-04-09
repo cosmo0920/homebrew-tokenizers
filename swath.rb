@@ -1,5 +1,3 @@
-require 'formula'
-
 class Swath < Formula
   homepage 'http://www.cs.cmu.edu/~paisarn/software.html'
   url 'ftp://linux.thai.net/pub/thailinux/software/swath/swath-0.5.2.tar.xz'

@@ -1,5 +1,3 @@
-require "formula"
-
 class CjkTokenizer < Formula
   homepage "https://github.com/rboulton/cjk-tokenizer"
   url "https://github.com/rboulton/cjk-tokenizer/archive/eb7ec18aabcbc9368542f64dab0ed8f424d52290.zip"
