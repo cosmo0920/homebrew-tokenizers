@@ -2,8 +2,8 @@ require "formula"
 
 class Friso < Formula
   homepage "https://code.google.com/p/friso/"
-  url "https://friso.googlecode.com/files/friso-1.6.0-src-lib-dict.zip"
-  sha256 "8d97859fb3cb1711193a3076b3a471f55a297a5cda59ba14a19b43e4a647ce91"
+  url "http://downloads.sourceforge.net/project/friso/friso-1.6.1-src-dict.zip"
+  sha256 "768ef0c92272355ea3e411b0dfaec26cc6f3b244ee96e4a72c35fbd6e5333cef"
 
   head do
     url "http://git.oschina.net/lionsoul/friso.git"
