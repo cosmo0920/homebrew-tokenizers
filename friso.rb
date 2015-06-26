@@ -4,7 +4,7 @@ class Friso < Formula
   sha256 "768ef0c92272355ea3e411b0dfaec26cc6f3b244ee96e4a72c35fbd6e5333cef"
 
   head do
-    url "http://git.oschina.net/lionsoul/friso.git"
+    url "https://git.oschina.net/lionsoul/friso.git"
   end
 
   def install
@@ -12,16 +12,18 @@ class Friso < Formula
     build_dir = Dir.pwd
     inreplace "src/Makefile" do |s|
       s.change_make_var! "CC", ENV.cc
-      s.change_make_var! "LIBRARY_DIR", "#{prefix}/lib"
-      s.change_make_var! "INCLUDE_DIR", "#{prefix}/include/friso"
-      s.change_make_var! "INSTALL_DIR", "#{prefix}/bin"
+      s.change_make_var! "LIBRARY_DIR", lib
+      s.change_make_var! "INCLUDE_DIR", "#{include}/friso"
+      s.change_make_var! "INSTALL_DIR", "#{bin}/bin"
       s.change_make_var! "LIB_FILE", "libfriso.dylib"
       s.gsub! "-L.", "-L #{build_dir}/src"
     end
     inreplace "friso.ini" do |s|
       s.gsub! "/c/products/friso/dict/UTF-8/", "/usr/local/share/friso/dict/UTF-8/"
     end
-    system "cd src && make share && make friso"
+    cd "src" do
+      system "make share && make friso"
+    end
 
     # install header && library && binary
     (include/"friso").install "src/friso.h"

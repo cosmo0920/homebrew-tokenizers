@@ -5,7 +5,7 @@ class Swath < Formula
   head "http://linux.thai.net/svn/software/swath/trunk", :using => :svn
 
   depends_on "pkg-config" => :build
-  depends_on "libtool"
+  depends_on "libtool" => :build
   depends_on "cosmo0920/tokenizers/datrie"
 
   def install
