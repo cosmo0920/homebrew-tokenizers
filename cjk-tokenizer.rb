@@ -16,7 +16,9 @@ class CjkTokenizer < Formula
       # Now change all /usr/local at once to the prefix
       s.gsub! "/usr/local", prefix
     end
-    cd "cjk-tokenizer && make"
+    cd "cjk-tokenizer" do
+      system "make"
+    end
     lib.install "cjk-tokenizer/libcjk-tokenizer.a"
     (include/"cjk-tokenizer").install "cjk-tokenizer/cjk-hanconvert.h"
     (include/"cjk-tokenizer").install "cjk-tokenizer/cjk-tokenizer.h"
